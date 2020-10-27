@@ -1,10 +1,4 @@
 {
-  "___NOTE__",
-  "Please move enabled rules to here",
-  "And use 'error' level since --quiet option will omit 'warn' level rules.",
-  "Other available rules are located in 'disabled_rules.json'."
-  "___NOTE END___"
-
   "arrow_spacing": {
     "level": "error"
   },
