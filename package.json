@@ -1,6 +1,6 @@
 {
-  "name": "@JustDo/cli",
-  "description": "Customized Coffeelint to adhere JustDo Style Guide.",
+  "name": "@coffeelint/cli",
+  "description": "Lint your CoffeeScript",
   "version": "4.1.1",
   "homepage": "https://coffeelint.github.io/",
   "keywords": [
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ak4702/coffeelint.git"
+    "url": "git://github.com/coffeelint/coffeelint.git"
   },
   "bin": {
     "coffeelint": "./bin/coffeelint"
