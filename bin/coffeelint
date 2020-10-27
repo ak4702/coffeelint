@@ -19,7 +19,7 @@ var thisdir = path.dirname(fs.realpathSync(__filename));
 // I use this so vim runs the newest code while I work on CoffeeLint. -Asa
 commandline = path.join(thisdir, '..', "lib", "commandline.js");
 if (!existsFn(commandline)) {
-    require('coffee-script/register');
+    require('coffeescript/register');
     require('../src/commandline');
 } else {
     // This is the code path that everyone else is really going to use.
