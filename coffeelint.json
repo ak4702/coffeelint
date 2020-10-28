@@ -77,7 +77,7 @@
     "name": "no_implicit_returns",
     "level": "error"
   },
-  "limit_new_lines": {
+  "limit_newlines": {
     "level": "error"
   },
 
