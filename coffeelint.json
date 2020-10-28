@@ -60,9 +60,7 @@
     "ops": [
       "and",
       "or",
-      "not",
-      "is",
-      "isnt"
+      "not"
     ]
   },
   "space_operators": {
