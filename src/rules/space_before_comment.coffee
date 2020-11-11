@@ -14,8 +14,8 @@ module.exports = class spaceBeforeComment
   containsComment = false
   lintLine: (line, lineApi) ->
     # Ignore if line contains symbol of block comment (###)
-    if line.match regexes.blockCommentPattern
+    if regexes.blockCommentPattern.test line
       return false
-    if line.match regexes.commentPattern
-      if not line.match regexes.correctPattern
+    if regexes.commentPattern.test line
+      if not regexes.correctPattern.test line
         return true
