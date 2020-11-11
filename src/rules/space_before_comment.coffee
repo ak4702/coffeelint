@@ -1,7 +1,7 @@
 regexes =
     commentPattern: /^\s*\#+.+$/ #Starts with #
     correctPattern: /^\s*\#+\s[^\s].+$/ #Starts with # and followed by a single whitespace
-    blockCommentPattern: /^\s*\#+\#+\#+.*$/ #Starts with ###
+    blockCommentPattern: /^\s*(###)+.*$/ #Starts with ###
 
 module.exports = class spaceBeforeComment
 

@@ -1,7 +1,7 @@
 regexes =
     lineCommentPattern: /^\s*\#+.+$/
-    blockCommentPattern: /^\s*\#+\#+\#+.*$/
-    nonCommentPattern: /\S/
+    blockCommentPattern: /^\s*(###)+.*$/
+    nonCommentPattern: /\S|^[\n\s+]*$/
 
 module.exports = class LimitCommentIndent
 
@@ -51,6 +51,4 @@ module.exports = class LimitCommentIndent
     else if lineComment
       lineComment = false
       codeIndentLevel = line.search regexes.nonCommentPattern
-      if commentIndentLevel != codeIndentLevel
-        return true
-      else return false
+      return commentIndentLevel != codeIndentLevel
