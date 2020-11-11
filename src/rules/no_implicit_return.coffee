@@ -47,7 +47,7 @@ module.exports = class NoImplicitReturns
       @errors.push astApi.createError
         context: code.variable
         lineNumber: firstLine
-        lineNumberEnd: firstLine
+        lineNumberEnd: lastLine
 
     else if expressions.length == 1
       # Single line that ends with a return
