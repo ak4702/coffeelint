@@ -232,6 +232,7 @@ coffeelint.registerRule require './rules/limit_newlines.coffee'
 coffeelint.registerRule require './rules/limit_comment_indent.coffee'
 coffeelint.registerRule require './rules/space_before_comment.coffee'
 coffeelint.registerRule require './rules/no_multiple_trailing_whitespace.coffee'
+coffeelint.registerRule require './rules/no_newlines_after_class.coffee'
 getTokens = (source) ->
     try
         # If there are syntax errors this will abort the lexical and line

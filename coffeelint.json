@@ -93,7 +93,9 @@
   "space_before_comment": {
     "level": "error"
   },
-
+  "no_newlines_after_class": {
+    "level": "error"
+  },
 
   "bracket_spacing": {
     "level": "ignore",
