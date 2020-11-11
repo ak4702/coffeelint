@@ -23,9 +23,9 @@ module.exports = class LimitCommentIndent
   lintLine: (line, lineApi) ->
     # Starting with block comments since it also matches the line comment pattern
     # but we want to check if the two "###" symbols are aligned in addition
-    if (blockComment == "start" or blockComment == "end" or line.match regexes.blockCommentPattern)
+    if (blockComment == "start" or blockComment == "end" or regexes.blockCommentPattern.test line)
       # Matches "###"
-      if line.match regexes.blockCommentPattern
+      if regexes.blockCommentPattern.test line
         if blockComment == "none"
           blockComment = "start"
           commentIndentLevel = line.indexOf "#"
@@ -45,7 +45,7 @@ module.exports = class LimitCommentIndent
         if endCommentIndentLevel != codeIndentLevel
           return true
     # Perform single line comment check if it's not block comment
-    else if line.match regexes.lineCommentPattern
+    else if regexes.lineCommentPattern.test line
       lineComment = true
       commentIndentLevel = line.indexOf "#"
     else if lineComment
@@ -54,14 +54,3 @@ module.exports = class LimitCommentIndent
       if commentIndentLevel != codeIndentLevel
         return true
       else return false
-
-
-    # if not line.match regexes.commentPattern
-    #   codeIndentLevel = line.search regexes.nonCommentPattern
-    # else
-    #   if not line.match regexes.blockCommentPattern
-    #     commentIndentLevel = line.indexOf "#"
-    #
-    #     if codeIndentLevel != commentIndentLevel
-    #       return true
-    #     else return false
